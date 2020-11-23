@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>card</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div *ngIf="arry.length > 0">
+
+  <div class="card ion-padding" *ngFor="let item of arry;let i=index">
+    <ion-text>{{item.name}}</ion-text>
+    <br>
+    <ion-text>{{item.surname}}</ion-text>
+
+    <ion-buttons  (click)="deleteItem(i)">
+      <ion-icon name="trash-outline" size="large"></ion-icon>
+    </ion-buttons>
+  </div>
+
+</div>
+</ion-content>
