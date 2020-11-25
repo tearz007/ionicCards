@@ -13,10 +13,8 @@ export class CardService {
   }
 
   deleteItem(id){
-
    for (let i = 0; i < this.foodList.length; i++) {
     if(id==i){
-      console.log(i)
      this.foodList.splice(i, 1)
     }
    }

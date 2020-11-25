@@ -22,11 +22,9 @@ sName
 
   view(){
     let arry=this.cardServise.displayCard();
-
     for (let i = 0; i< arry.length; i++) {
      console.log(arry[i]); 
     }
-
     this.route.navigate(['card'])
   }
 }
