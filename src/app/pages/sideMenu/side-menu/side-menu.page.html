@@ -1,0 +1,25 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>sideMenu</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-menu side="start" contentId="main">
+  <ion-header>
+    <ion-toolbar translucent>
+      <!-- <ion-title>Menu</ion-title> -->
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+      <ion-list>
+        <ion-item (click)="goMenu()"  detail="true">Menu</ion-item>
+        <ion-item  (click)="goCard()" detail="true">Card</ion-item>
+        <ion-item (click)="goRegistration()" detail="true">Registration</ion-item>   
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>

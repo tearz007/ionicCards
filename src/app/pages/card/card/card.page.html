@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>card</ion-title>
+    <div class="btn ion-padding" slot="end">
+      <ion-badge slot="start">{{count}}</ion-badge>
+      <ion-text>Items</ion-text>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="arry.length > 0">
+
+    <div class="card ion-padding" *ngFor="let item of arry;let i=index">
+      <div class="img">
+        <img [src]=item.img>
+      </div>
+      <ion-buttons (click)="deleteItem(i)">
+        <ion-icon name="trash-outline" size="large"></ion-icon>
+      </ion-buttons>
+
+      <div class="nevBtn ion-padding">
+        <ion-buttons (click)=" substract(i)">
+          <ion-icon name="caret-back-sharp" size="large"></ion-icon>
+        </ion-buttons>
+        <ion-text>{{item.count}}</ion-text>
+        <ion-buttons (click)="add(i)">
+          <ion-icon name="caret-forward-sharp" size="large"></ion-icon>
+        </ion-buttons>
+      </div>
+
+    </div>
+
+  </div>
+</ion-content>

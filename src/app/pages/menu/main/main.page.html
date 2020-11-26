@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>menu</ion-title>
+    <ion-item slot="end">
+     
+      <ion-button expand="block" fill="outline" (click)="view()">view</ion-button>
+      <ion-badge >{{ this.cardServise.count()}}</ion-badge>
+    </ion-item>
+     
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngIf="array.length > 0">
+    <div class="img" *ngFor="let item of array; let i=index">
+      <a><img [src]=item></a>
+      <div class="btn ion-padding">
+        <ion-button expand="block" fill="outline" (click)=" submit(i)">ADD<ion-icon name="add-circle-sharp"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </div>
+  <!-- 
+  <div class="menu">
+    <div class="menuItems ion-padding">
+
+      <div class="log">
+        <ion-input type="text" placeholder="name" clearInput [(ngModel)]="name"></ion-input>
+      </div>
+      <div class="log">
+        <ion-input clearInput type="text" placeholder="surname" [(ngModel)]="sName"></ion-input>
+      </div>
+
+      {{name}} {{sName}}
+    </div>
+  </div> -->
+</ion-content>
